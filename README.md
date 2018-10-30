@@ -16,6 +16,9 @@ Mình sẽ học theo 2 cái chính:
 
 + nhóm học ở công ty
 
++ làm theo các tutorial ở [A Free course in Deep Reinforcement Learning from beginner to expert.
+](https://simoninithomas.github.io/Deep_reinforcement_learning_Course/)
+
 Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là tốc độ bám sát hoặc nhanh hơn tốc độ gốc 1 chút. Sẽ cập nhật tiến độ học ở file readme này, về bài tập, tóm tắt nội dung bài giảng, mình sẽ tạo các folder/file để cập nhật.
 
 ## Some goals
@@ -26,3 +29,5 @@ Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là t�
 ## Timeline
 
 - 24 Oct 18: init
+- 28 Oct 18: học xong lesson 1 CS294
+- 30 Oct 18: kick off nhóm RL ở công ty. Viết xong [bài giới thiệu về OpenAI.](https://tulip4attoo.github.io/blog/lam-quen-openai-gym/)
