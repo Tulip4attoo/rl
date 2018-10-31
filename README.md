@@ -21,6 +21,13 @@ Mình sẽ học theo 2 cái chính:
 
 Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là tốc độ bám sát hoặc nhanh hơn tốc độ gốc 1 chút. Sẽ cập nhật tiến độ học ở file readme này, về bài tập, tóm tắt nội dung bài giảng, mình sẽ tạo các folder/file để cập nhật.
 
+## Tracking plan
+
++ CS 294: xong lesson 1
++ các project: 
+    
+    + taxi-v2
+
 ## Some goals
 
 - implement tetris RL at the end of Nov.
@@ -31,3 +38,4 @@ Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là t�
 - 24 Oct 18: init
 - 28 Oct 18: học xong lesson 1 CS294
 - 30 Oct 18: kick off nhóm RL ở công ty. Viết xong [bài giới thiệu về OpenAI.](https://tulip4attoo.github.io/blog/lam-quen-openai-gym/)
+- 31 Oct 18: code xong bài [taxi-v2](https://github.com/Tulip4attoo/rl/tree/master/f-class/taxi-v2), sử dụng q learning. Remind lại khái niệm q-table. Lần đầu áp dụng thực hành 1 bài RL.
