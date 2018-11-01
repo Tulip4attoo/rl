@@ -11,7 +11,7 @@ action_size = env.action_space.n
 
 q_table = np.zeros((state_size, action_size))
 
-total_episodes = 50000        # Total episodes
+total_episodes = 5000         # Total episodes
 total_test_episodes = 100     # Total test episodes
 max_steps = 99                # Max steps per episode
 
@@ -44,7 +44,7 @@ for episode in range(total_episodes):
         if done:
             break
 
-    if episode % 1e4 == 0:
+    if episode % 1e3 == 0:
         print("done episode ", episode)
 
 env.reset()

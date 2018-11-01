@@ -1,5 +1,8 @@
 # package folder
 gym/
+docs/
+*.pkl
+*/models/*
 
 
 # Byte-compiled / optimized / DLL files
