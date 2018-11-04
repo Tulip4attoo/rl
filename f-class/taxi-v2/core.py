@@ -4,8 +4,6 @@ import time
 
 env = gym.make("Taxi-v2")
 
-env.render()
-
 state_size = env.observation_space.n
 action_size = env.action_space.n
 

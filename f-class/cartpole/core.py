@@ -32,6 +32,8 @@ discount_rate = 0.95               # Discounting rate
 pretrain_length = batch_size   # Number of experiences stored in the Memory when initialized for the first time
 memory_size = 1000000          # Number of experiences the Memory can keep
 
+tf.reset_default_graph()
+
 DQNetwork = DQNetwork(state_size, action_size, learning_rate)
 
 # PART II: GEN MEMORY
@@ -83,7 +85,6 @@ def predict_action(explore_start, explore_stop, decay_rate, decay_step, state, a
 
 # PART III: TRAIN AGENT
 
-tf.reset_default_graph()
 
 print("train agent")
 # Saver will help us to save our model
