@@ -46,6 +46,9 @@ Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là t�
 - 30 Oct 18: kick off nhóm RL ở công ty. Viết xong [bài giới thiệu về OpenAI.](https://tulip4attoo.github.io/blog/lam-quen-openai-gym/)
 - 31 Oct 18: code xong bài [taxi-v2](https://github.com/Tulip4attoo/rl/tree/master/f-class/taxi-v2), sử dụng q learning. Remind lại khái niệm q-table. Lần đầu áp dụng thực hành 1 bài RL.
 - 31 Oct 18: code xong bài [cartpole](https://github.com/Tulip4attoo/rl/tree/master/f-class/cartpole). Lần đầu tiếp xúc với khái niệm DQN (deep q network). Dùng code từ 1 bài có architect khác, đổi architect từ có dùng CNN và input image sang chỉ dùng dense cho input size (1,4). Sửa code mệt nghỉ.
-- 01 Nov 18: thuyết tình về 2 projects với team nhưng hơi fail. Chú ý tới vấn đề tại sao weight 1 đằng code 1 nẻo (về $w_{i-1} / w_{i}$). Tuy nhiên chỉ dừng lại ở chú ý chứ chưa biết làm như thế nào =))
+- 01 Nov 18: thuyết tình về 2 projects với team nhưng hơi fail. Chú ý tới vấn đề tại sao weight 1 đằng code 1 nẻo (về w_{i-1} / w_{i}). Tuy nhiên chỉ dừng lại ở chú ý chứ chưa biết làm như thế nào =))
 - 02 Nov 18: đọc bài và hiểu thêm chút chút về DRL, cũng như hiểu được tầm đột phá của RL khi có thể dùng được transfer learning (giờ thì chưa)
 - 02 Nov 18: lựa chọn [Pong-v0](https://gym.openai.com/envs/Pong-v0/) làm project tiếp theo (sử dụng images làm input). Ngoài ra biết thêm về 1 hệ môi trường mới ([MAMETookit](https://github.com/M-J-Murray/MAMEToolkit)), có thể chơi được game arcade. 
+- 04 Nov 18: họp nhóm RL thực hành ở công ty. Cũng ko ổn lắm, mà kệ. Viết bài tóm tắt TIR về tình hình ứng dụng RL hiện tại. Nói chung mấy hôm rồi chưa học được mấy.
+- 05 Nov 18: học xong l2 của CS294. Do quá bận nên chưa thể làm file note nội dung ra được... Không biết sau có thể làm không?
+
