@@ -3,6 +3,7 @@ gym/
 docs/
 *.pkl
 */*/models/
+*/*/data/
 notes/
 
 # model
