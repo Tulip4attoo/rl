@@ -2,8 +2,11 @@
 gym/
 docs/
 *.pkl
-*/models/*
+*/*/models/
+notes/
 
+# model
+*.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
