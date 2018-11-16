@@ -133,7 +133,8 @@ with tf.Session() as sess:
                 print('Episode: {}'.format(episode),
                             'Total reward: {}'.format(total_reward),
                             'Training loss: {:.4f}'.format(loss),
-                            'Explore P: {:.4f}'.format(explore_probability))
+                            'Explore P: {:.4f}'.format(explore_probability),
+                            "Memory len: {}".format(len(memory.buffer)))
             else:
                 new_frame, reward, done, _ = env.step(action)
                 stacked_frames, new_stacked_state = utils.stack_frames(stacked_frames, new_frame, is_new_episode)

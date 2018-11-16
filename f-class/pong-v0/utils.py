@@ -19,7 +19,8 @@ def preprocess_image(image):
 
 def stack_4_frames(image_list):
     # stack 4 frames into a 4 channels image
-    stacked = np.stack(image_list, axis=-1)
+    # change type to float16 to reduce memory usage
+    stacked = np.stack(image_list, axis=-1).astype(np.float16)
     return stacked
 
 def stack_frames(stacked_frames, new_frame, is_new_episode):
