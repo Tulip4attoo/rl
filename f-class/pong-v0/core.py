@@ -6,6 +6,7 @@ from collections import deque # Ordered collection with ends
 from model import DQNetwork
 import cv2
 import utils
+from memory import Memory
 
 import warnings # This ignore all the warning messages that are normally printed during the training because of skiimage
 warnings.filterwarnings('ignore')
@@ -34,7 +35,7 @@ discount_rate = 0.95               # Discounting rate
 
 ### MEMORY HYPERPARAMETERS
 pretrain_length = batch_size   # Number of experiences stored in the Memory when initialized for the first time
-memory_size = 10000          # Number of experiences the Memory can keep
+memory_size = 100          # Number of experiences the Memory can keep
 
 tf.reset_default_graph()
 
@@ -43,19 +44,19 @@ DQNetwork = DQNetwork(state_size, action_size, learning_rate)
 # PART II: GEN MEMORY
 print("gen memory")
 
-class Memory():
-    def __init__(self, max_size):
-        self.buffer = deque(maxlen = max_size)
+# class Memory():
+#     def __init__(self, max_size):
+#         self.buffer = deque(maxlen = max_size)
     
-    def add(self, experience):
-        self.buffer.append(experience)
+#     def add(self, experience):
+#         self.buffer.append(experience)
     
-    def sample(self, batch_size):
-        buffer_size = len(self.buffer)
-        index = np.random.choice(np.arange(buffer_size),
-                                size = batch_size,
-                                replace = False)
-        return [self.buffer[i] for i in index]
+#     def sample(self, batch_size):
+#         buffer_size = len(self.buffer)
+#         index = np.random.choice(np.arange(buffer_size),
+#                                 size = batch_size,
+#                                 replace = False)
+#         return [self.buffer[i] for i in index]
 
 memory = Memory(max_size = memory_size)
 stacked_frames  =  deque([np.zeros((84,84), dtype=np.int) for i in range(stack_size)], maxlen=stack_size) 

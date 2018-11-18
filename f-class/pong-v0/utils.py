@@ -43,3 +43,6 @@ def encode_number_to_onehot(number, size):
 
 def encode_list_to_onehot(_list, action_size):
     return np.array([encode_number_to_onehot(i, action_size) for i in _list])
+
+def gen_data_file_name(prefix_data_name, end_of_name):
+    return prefix_data_name + str(end_of_name)
