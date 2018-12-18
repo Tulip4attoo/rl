@@ -4,6 +4,7 @@ docs/
 *.pkl
 */*/models/
 */*/data/
+*/*/cfg/
 notes/
 
 # model
