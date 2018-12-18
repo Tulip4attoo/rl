@@ -16,7 +16,7 @@ Mình sẽ học theo 2 cái chính:
 
 + [Khóa CS 294 của Berkerley](http://rail.eecs.berkeley.edu/deeprlcourse/): về cơ bản thì mình nghĩ học khóa nào cũng có ích thôi. Và cơ bản khóa này đang diễn ra, tạo cảm giác học đuổi sẽ thích hơn. Khóa có 28 lectures, 5 homeworks + 1 project.
 
-~~+ nhóm học ở công ty~~
++ ~~nhóm học ở công ty~~
 
 + làm theo các tutorial ở [A Free course in Deep Reinforcement Learning from beginner to expert.
 ](https://simoninithomas.github.io/Deep_reinforcement_learning_Course/)
@@ -34,9 +34,9 @@ Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là t�
 
     + [cartpole](https://github.com/Tulip4attoo/rl/tree/master/f-class/cartpole) (done)
 
-    + pong-v0 (doing)
+    + ~~pong-v0 (stop)~~ (có 2 vấn đề với prj này: 1 là mình nghi ngờ reward function của nó, mà mình lại không thọc vào được source, 2 là mình đã code xong, game chạy, chỉ có điều chưa train đủ, mà lại bỏ hơi lâu nên start prj mới luôn cho đỡ phiền. Btw thì cứ chạy code kia mình nghĩ cũng ok thôi).
 
-    + street fighter (to do)
+    + [street fighter](https://github.com/Tulip4attoo/rl/tree/master/f-class/street_fighter) (doing)
 + các bài viết:
 
     + [bài giới thiệu về OpenAI.](https://tulip4attoo.github.io/blog/lam-quen-openai-gym/)
@@ -45,8 +45,8 @@ Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là t�
 
 ## Some goals
 
-- implement tetris RL at the end of Nov.
-- implement some bot of some games at the end of Dec.
+- ~~implement tetris RL at the end of Nov.~~ (failed)
+- ~~implement some bot of some games at the end of Dec.~~ --> implement street fighter bot at the end of Dec.
 
 ## Timeline
 
@@ -73,3 +73,4 @@ Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là t�
 - 19 Nov 18: phat hiện ra kiểu save file và load chạy cực kỳ cực kỳ chậm. Suy nghĩ tới việc chuyển load cho 10/100 batch cho từng lần chạy, chú ý 100 batch thực ra chỉ là random trong 100/1mil = 0.0001 nên ảnh hưởng hầu như không đáng kể, có thể thực hiện được. Tuy nhiên, mình đọc được bài này: https://github.com/fg91/Deep-Q-Learning/blob/master/DQN.ipynb Ở đây có 1 cách khá hay là chuyển về dạng uint8 (so với np.float16 của mình), cũng như chuyển dạng lưu là 1mil frame, và khi load chỉ cần index sẽ kéo ra 5 frame, tạo thành state và next_state. Như vậy, memory_size có thể tăng lên thêm 2 * 8 = 16 lần, như giờ mình có thể train với 35k memory_size --> 35k*16 = 560k, có thể coi là đã ổn rồi. Cheer! Vậy là mình nên đọc qua thêm vài github để coi họ có các hướng nào hay ho để học tập nữa, hehee.
 - 10 Dec 18: do chuyện cá nhân nên bỏ bê hơi lâu, code được phase 1 và phase 2 của cfg. Nếu phase 3 ok nữa thì sẽ triển luôn vào những dự án tiếp.
 - 18 Dec 18: nghĩ về chuyện chuyển qua code bằng pytorch
+- 18 Dec 18: đã xong hệ thống config, đó là lý do mình chuyển sang project mới (street_fighter) làm để áp dụng luôn.
