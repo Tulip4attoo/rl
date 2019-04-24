@@ -1,7 +1,5 @@
 # RL
 
-Reinforcement Learning là 1 topic rất triển vọng của ML và có nhiều bước tiến lớn trong thời gian gần đây. Repo này là nơi để lưu trữ các ghi chép cũng như lưu các project về Reinforcement Learning.
-
 Reinforcement Learning is a trending topic with huge steps in ML recent years. This Repo is created to:
 
 + save my Reinforcement Learning projects.
@@ -9,17 +7,17 @@ Reinforcement Learning is a trending topic with huge steps in ML recent years. T
 
 # Projects
 
-## Taxi-v2
+## [Taxi-v2](https://github.com/Tulip4attoo/rl/tree/master/taxi-v2)
 
 Using Q table to solve Taxi-v0 problem. Use encoded (and small finite set of) state as input.
 
-## Cartpole
+## [Cartpole](https://github.com/Tulip4attoo/rl/tree/master/cartpole)
 
 Using Deep Q Network (DQN) to solve Cartpole problem. 
 
 Use TensorFlow.
 
-## Pong-v0
+## [Pong-v0](https://github.com/Tulip4attoo/rl/tree/master/pong-v0)
 
 Using Deep Q Network (DQN) to solve Cartpole problem. Use screenshot as input.
 
