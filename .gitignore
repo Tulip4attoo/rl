@@ -2,9 +2,9 @@
 gym/
 docs/
 *.pkl
-*/*/models/
-*/*/data/
-*/*/cfg/
+*/models/
+*/data/
+*/cfg/
 notes/
 
 # model
