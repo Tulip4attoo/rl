@@ -3,18 +3,18 @@ import gym
 import time
 
 env = gym.make("Taxi-v2")
-
 state_size = env.observation_space.n
 action_size = env.action_space.n
 
 q_table = np.zeros((state_size, action_size))
 
+FILE_SAVE = "q_table.npy"
 total_episodes = 5000         # Total episodes
 total_test_episodes = 100     # Total test episodes
 max_steps = 99                # Max steps per episode
 
 learning_rate = 0.7           # Learning rate
-discount_rate = 0.618         # Discounting rate
+discount_rate = 0.95         # Discounting rate
 
 # Exploration parameters
 epsilon = 1.0                 # Exploration rate
@@ -41,10 +41,10 @@ for episode in range(total_episodes):
         state = new_state
         if done:
             break
-
     if episode % 1e3 == 0:
         print("done episode ", episode)
 
+np.save(FILE_SAVE, q_table)
 env.reset()
 rewards = []
 

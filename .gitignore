@@ -2,6 +2,7 @@
 gym/
 docs/
 *.pkl
+*.npy
 */models/
 */data/
 */cfg/
