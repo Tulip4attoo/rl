@@ -22,3 +22,9 @@ Use TensorFlow.
 Using Deep Q Network (DQN) to solve Cartpole problem. Use screenshot as input.
 
 Use TensorFlow.
+
+# Notes
+
+All my code are using Python3.
+
+My first version is using TF, but I am switching to Pytorch.
