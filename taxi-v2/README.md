@@ -1,4 +1,4 @@
-# [PYTHON] Q-learning for playing Flappy Bird
+# [PYTHON] Q-learning for playing Taxi-v2
 
 ## Introduction
 
