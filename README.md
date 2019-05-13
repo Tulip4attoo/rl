@@ -11,6 +11,11 @@ Reinforcement Learning is a trending topic with huge steps in ML recent years. T
 
 Using Q table to solve Taxi-v0 problem. Use encoded (and small finite set of) state as input.
 
+<p align="center">
+  <img src="taxi-v2/taxi-v2.gif"><br>
+  <i>Agent playing</i>
+</p>
+
 ## [Cartpole](https://github.com/Tulip4attoo/rl/tree/master/cartpole)
 
 Using Deep Q Network (DQN) to solve Cartpole problem. 
