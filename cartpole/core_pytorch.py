@@ -75,7 +75,8 @@ def predict_action(explore_start, explore_stop, decay_rate, decay_step, state, a
         action = np.random.randint(0, action_size)
     else:
         with torch.no_grad():
-            Qs = DQNetwork.forward(next_states_mb)
+            t_next = torch.tensor(state.reshape((1, *state.shape))).type('torch.FloatTensor')
+            Qs = DQNetwork.forward(t_next)
         choice = np.argmax(Qs)
         action = possible_actions[int(choice)]
     return action, explore_probability
@@ -128,8 +129,9 @@ for episode in range(total_episodes):
 
         target_Qs_batch = []
         # Get Q values for next_state 
+        t_next = torch.tensor(next_states_mb).type('torch.FloatTensor')
         with torch.no_grad():
-            Qs_next_state = DQNetwork.forward(torch.from_numpy(next_states_mb))
+            Qs_next_state = DQNetwork.forward(t_next)
 
         # Set Q_target = r if the episode ends at s+1, otherwise set Q_target = r + gamma*maxQ(s', a')
         for i in range(0, len(batch)):
@@ -138,16 +140,18 @@ for episode in range(total_episodes):
             if terminal:
                 target_Qs_batch.append(rewards_mb[i])
             else:
-                target = rewards_mb[i] + discount_rate * np.max(Qs_next_state[i])
+                target = rewards_mb[i] + discount_rate * Qs_next_state[i].max()
                 target_Qs_batch.append(target)
         targets_mb = np.array([each for each in target_Qs_batch])
 
         with torch.no_grad():
-            Qs = torch.sum(torch.mul(DQNetwork.forward(torch.from_numpy(next_states_mb)), actions_mb), dim=1)
+            t_action_mb = torch.tensor(actions_mb).type('torch.FloatTensor')
+            Qs = torch.sum(torch.mul(DQNetwork.forward(t_next), t_action_mb), dim=1)
 
         optimizer.zero_grad()
         # The loss is the difference between our predicted Q_values and the Q_target
         # Sum(Qtarget - Q)^2
-        loss = criterion(Qs, targets_mb)
+        loss = criterion(Qs, torch.tensor(targets_mb, requires_grad=True).type('torch.FloatTensor'))
         loss.backward()
         optimizer.step()
+
