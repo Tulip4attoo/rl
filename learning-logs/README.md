@@ -74,3 +74,4 @@ Tạm sẽ gắng follow theo khóa CS 294 - 1 tuần 2-3 videos, nghĩa là t�
 - 10 Dec 18: do chuyện cá nhân nên bỏ bê hơi lâu, code được phase 1 và phase 2 của cfg. Nếu phase 3 ok nữa thì sẽ triển luôn vào những dự án tiếp.
 - 18 Dec 18: nghĩ về chuyện chuyển qua code bằng pytorch
 - 18 Dec 18: đã xong hệ thống config, đó là lý do mình chuyển sang project mới (street_fighter) làm để áp dụng luôn.
+
